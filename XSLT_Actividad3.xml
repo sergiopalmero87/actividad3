@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="XSLT_Actividad3_Req1.xsl"?>
 <ite nombre="Instituto Tecnológico Edix" web="https://institutotecnologico.edix.com" >
 
     <empresa>Proeduca</empresa>
@@ -54,7 +53,6 @@
             <grado>Superior</grado>
             <decretoTitulo año="2010" />
         </ciclo>
-
     </ciclos>
 
 </ite>
