@@ -6,7 +6,7 @@
 
 ---Dado el siguiente XML---
 
-ite nombre="Instituto Tecnológico Edix" web="https://institutotecnologico.edix.com" >
+< ite nombre="Instituto Tecnológico Edix" web="https://institutotecnologico.edix.com" >
 
     <empresa>Proeduca</empresa>
     <telefono>+34 91 787 39 91</telefono>
