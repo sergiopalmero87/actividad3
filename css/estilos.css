@@ -1,20 +1,188 @@
 *{
-    padding: 3px;
+    margin: 0;
+    left: 0;
+    
 }
 
-h3 {
-    color: red;
+
+body{
+    background-color:#ffffff;
+}
+
+.header{
+    padding: 10px;
+    color:black;
+    display: flex;
+    justify-content:space-between;
+   
+}
+
+
+
+.info span{
+    font-weight: 500;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body table{
-    border-radius: 3px;
+.jefes{
+    
+    margin: 5px;
+    padding: 5px; 
+    display:flex;
+    gap: 30px;
+    justify-content: center;
 }
 
-body a{
+.director{
+    background-color: rgb(17, 17, 17);
+    margin-top: 5px;
+    padding: 8px;
+    color: white;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    
+}
+
+.director span{
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.director h3{
+    font-weight: 200;
+}
+
+.jefe_estudios{
+    background-color: rgb(17, 17, 17);
+    margin-top: 5px;
+    padding: 8px;
+    color: white;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+.jefe_estudios span{
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.jefe_estudios h3{
+    font-weight: 200;
+}
+
+
+
+.tablas{
+    margin: 5px;
+    padding: 5px; 
+    display:flex;
+    gap: 30px;
+    justify-content: center;
+    
+}
+
+.tabla_profesores{
+    margin-top: 5px; 
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tabla_profesores table{
+    text-align: center;
+}
+
+.tabla_ciclos{
+    margin-top: 5px; 
+    padding: 5px;  
+    display: flex;
+    flex-direction: column; 
+}
+
+.tabla_ciclos h3{
+    text-align: center;
+}
+
+.tabla_ciclos table{
+    text-align: center;
+    
+}
+
+.listas{
+    margin: 5px;
+    padding: 5px; 
+    display:flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.lista_profesores{
+    
+    margin: 5px; 
+    padding: 5px;   
+}  
+
+.lista_ciclos{
+    
+    margin: 5px; 
+    padding: 5px;   
+}  
+
+.formulario{
+    border: rgb(139, 13, 13) solid 1px;
+    margin: 5px;
+    padding: 5px; 
+    text-align: center;
+    width: fit-content;
+    margin-left: 38%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(139, 13, 13) ;
+}
+
+.formulario form{
+    text-align: center;
+}
+
+.formulario fieldset{
+    border: rgb(139, 13, 13) solid 1px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(139, 13, 13) ;
+}
+
+.formulario label{
+    margin-left: 3px;
+}
+
+.formulario input{
+    margin-left: 5px;
+    width: 150px;
+}
+
+.enlace{
+    border: rgb(139, 13, 13) solid 1px;
+    margin: 5px;
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.enlace a{
     text-decoration: none;
+    color: black;
 }
 
-body a:hover{
-    text-decoration: underline;
+.enlace a:hover{
+    color: rgb(60, 60, 255);
 }
+

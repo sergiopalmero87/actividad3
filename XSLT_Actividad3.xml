@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="XSLT_Actividad3_HTML.xsl"?>
+
 <ite nombre="Instituto Tecnológico Edix" web="https://institutotecnologico.edix.com" >
 
     <empresa>Proeduca</empresa>
@@ -52,7 +54,7 @@
             <nombre>Desarrollo de Aplicaciones Multiplataforma</nombre>
             <grado>Superior</grado>
             <decretoTitulo año="2010" />
-        </ciclo>
+        </ciclo> 
     </ciclos>
 
 </ite>
