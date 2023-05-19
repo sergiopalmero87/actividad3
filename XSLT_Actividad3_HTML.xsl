@@ -68,7 +68,6 @@
                         <table border="1">
                             <thead>
 					            <tr>
-						            <th>Nombre</th>
                                     <th>Id</th>
 						            <th>Grado</th>
                                     <th>decretoTitulo</th>
@@ -79,7 +78,6 @@
 				            <tbody>
 					            <xsl:for-each select="ite/ciclos/ciclo">
 						            <tr>
-							            <td><xsl:value-of select="nombre"/></td>
 							            <td><xsl:value-of select="@id"/></td>
                                         <td><xsl:value-of select="grado"/></td>
 							            <td><xsl:value-of select="decretoTitulo/@año"/></td>
@@ -91,24 +89,18 @@
                 </div>
             <!--Creamos un div listas para englobar a las listas que vamos a hacer y darle estilo css -->
             <!-- Lista de profesores. Lo englobamos en div lista_profesores -->
-                <div class="listas">
-                    <div class="lista_profesores">
-                        <h3>Lista de profesores</h3><br/>
+                <div class="lista">
+                    <div class="lista_ciclos">
+                        <h3>Lista de ciclos</h3>
+                        <p>Pincha en el enlace para más información</p><br/>
                         <ol>
-                            <xsl:for-each select="ite/profesores/profesor">
-                                <li><xsl:value-of select="nombre"/></li>
+                            <xsl:for-each select="ite/ciclos/ciclo">
+                                <li><a href="https://institutotecnologico.edix.com/cursos" target="__BLANK"><xsl:value-of select="nombre"/></a></li>
                             </xsl:for-each>
                         </ol>
                     </div>
             <!--Lista de ciclos. Lo englobamos en div lista_ciclos -->
-                    <div class="lista_ciclos">
-                        <h3>Lista de ciclos</h3>
-                        <ul>
-                            <xsl:for-each select="ite/ciclos/ciclo/">
-                                <li><xsl:value-of select="nombre"/></li>
-                            </xsl:for-each>
-                        </ul>
-                    </div>
+                    
                 </div>
             <!--Creamos div formulario para englobar a todo el formulario y dar estilo css -->    
             <!-- Formulario -->
@@ -120,15 +112,15 @@
 
                             <label for="nombre">Nombre: </label>
                             <input id="nombre" type="text" name="nombre" placeholder="Escriba su nombre"/>
-                            <br/>
+                            <br/> <br/>
 
                             <label for="apellidos">Apellidos: </label>
                             <input id="apellido" type="text" name="apellido" placeholder="Escriba sus apellidos"/>
-                            <br/>
+                            <br/> <br/>
 
                             <label for="email">Email: </label>
                             <input id="email" type="text" name="email" placeholder="Escriba su email"/>
-                            <br/>
+                            <br/><br/>
                         
                             <label for="telefono">Teléfono: </label>
                             <input id="telefono" type="tel" name="telefono" placeholder="Escriba su número" />
