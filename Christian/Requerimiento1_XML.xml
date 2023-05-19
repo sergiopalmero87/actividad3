@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="XSLT_Actividad3_a_HTML.xsl"?>
+<?xml-stylesheet type="text/xsl" href="Requerimiento1_XSL.xsl"?>
 
-<ite nombre="Instituto Tecnológico Edix" web="https://institutotecnologico.edix.com">
+<ite nombre="Instituto Tecnologico Edix" web="https://institutotecnologico.edix.com">
 	<empresa>Proeduca</empresa>
 	<telefono>+34 91 787 39 91</telefono>
 	<profesores>
 		<profesor>
 			<id>1</id>
-			<nombre>Félix</nombre>
+			<nombre>Felix</nombre>
 		</profesor>
 		<profesor>
 			<id>2</id>
-			<nombre>Raúl</nombre>
+			<nombre>Raul</nombre>
 		</profesor>
 		<profesor>
 			<id>3</id>
@@ -19,20 +19,20 @@
 		</profesor>
 		<profesor>
 			<id>4</id>
-			<nombre>Tomás</nombre>
+			<nombre>Tomas</nombre>
 		</profesor>
 	</profesores>
 	<director>
 		<nombre>Chon</nombre>
-		<despacho>Numero 31, 3ª Planta, Edificio A</despacho>
+		<despacho>Numero 31, 3a Planta, Edificio A</despacho>
 	</director>
 	<jefe_estudios>
 		<nombre>Dani</nombre>
-		<despacho>Numero 27, 2ª Planta, Edificio B</despacho>
+		<despacho>Numero 27, 2a Planta, Edificio B</despacho>
 	</jefe_estudios>
 	<ciclos>
 		<ciclo id="ASIR">
-			<nombre>Administración de Sistemas Informáticos en Red</nombre>
+			<nombre>Administracion de Sistemas Informaticos en Red</nombre>
 			<grado>Superior</grado>
 			<decretoTitulo año="2009"/>
 		</ciclo>
