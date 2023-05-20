@@ -4,10 +4,11 @@
     <xsl:template match="/">
         <html>
         <head>
+        <!-- Añadimos un título a nuestra web-->
         <title>EDIX</title>
             <body>
             <h1><xsl:value-of select="ite/@nombre"/></h1>
-
+            <!-- Creamos la primera tabla con los profesores-->
             <table border="1">
                 <thead>
                     <tr>
@@ -27,7 +28,7 @@
                     </xsl:for-each> 
                 </tbody>
             </table>
-    
+            <!-- Creamos dos listas desordenadas, una para el director y otra para el jefe de estudios-->
             <h2>Director</h2>
             <ul>
                 <li><xsl:value-of select="/ite/director/nombre"/></li>
@@ -41,7 +42,7 @@
             </ul>
             <br/>
             <br/>
-
+            <!-- Creamos la segunda tabla con los ciclos-->
             <table border="1">
                 <thead>
                     <tr>
@@ -65,11 +66,11 @@
             </table>
             <br/>
             <br/>
-
+            <!-- Creamos varios enlaces para el instituto y proeduca-->
             <a href="https://institutotecnologico.edix.com"><xsl:value-of select="/ite/@nombre"/></a><br/><br/>
             <a href="https://www.grupoproeduca.com/"><xsl:value-of select="/ite/empresa"/></a><br/><br/>
             <a><xsl:value-of select="/ite/telefono"/></a><br/><br/>
-
+            <!-- Creamos un formulario de contacto-->
             <h3>Formulario de contacto</h3><br/>
                     <form action="procesarPeticion.jsp" method="get">
                         <fieldset>
@@ -96,14 +97,8 @@
 
                         </fieldset>
                     </form>
-            
-
-
-
             </body>
-        </head>
-
+        </head>        
         </html>
-
     </xsl:template>
 </xsl:stylesheet>

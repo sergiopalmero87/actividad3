@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+
 <!-- Este XSLT hará la transformación de un XML a otro. El output method resultante será un XML-->
+<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 <!-- Creamos el template-->
     <xsl:template match="/">
@@ -12,18 +13,18 @@
             <xsl:attribute name="nombre"><xsl:value-of select="/ite/@nombre"></xsl:value-of></xsl:attribute>
             <xsl:attribute name="web"><xsl:value-of select="/ite/@web"></xsl:value-of></xsl:attribute>
 
-    <!-- Creamos etiqueta empresa y dentro le ponemos el valor de empresa del xml antiguo.-->
-            <empresa>
+    <!-- Creamos etiqueta grupo y dentro le ponemos el valor de empresa del xml antiguo.-->
+            <grupo>
                 <xsl:value-of select="/ite/empresa"></xsl:value-of>
-            </empresa>
+            </grupo>
 
-    <!-- Creamos etiqueta telefono y dentro le ponemos el valor de telefono del xml antiguo.-->
-            <telefono>
+    <!-- Creamos etiqueta telefonoContacto y dentro le pasamos el valor de telefono del xml antiguo.-->
+            <telefonoContacto>
                 <xsl:value-of select="/ite/telefono"></xsl:value-of>
-            </telefono>
+            </telefonoContacto>
 
-    <!-- Creamos etiqueta personal que engloba a todos los trabajadores del intituto. Además los ordenamos de mayor a menor puesto.-->
-            <personal>
+    <!-- Creamos etiqueta directiva que engloba a los puestos que se ocupan de la dirección del centro.-->
+            <directiva>
 
     <!-- Creamos etiqueta director y dentro las etiquetas id y nombre con los valores del xml antiguo.-->
                 <director>                    
@@ -36,26 +37,25 @@
                     <nombre><xsl:value-of select="/ite/jefe_estudios/nombre"></xsl:value-of></nombre>
                     <despacho><xsl:value-of select="/ite/jefe_estudios/despacho"></xsl:value-of></despacho>
                 </jefe_estudios>
+            </directiva>
 
-    <!-- Creamos etiqueta profesores. Dentro de esta, por cada nodo profesores que había en el xml anterior, 
-    creamos nodos profesor y dentro de estos las etiquetas id y nombre con los valores del xml antiguo. -->
-                <profesores>
+    <!-- Creamos etiqueta claustro donde incluiremos al personal docente del instituto. Vamos a cambiar la etiqueta id del XML original
+    y la vamos a incluir en el XML transformado como atributo del profesor -->
+            <claustro>
                     <xsl:for-each select="/ite/profesores/profesor">
                         <profesor>
-                            <id><xsl:value-of select="id"></xsl:value-of></id>
+                            <xsl:attribute name="id"><xsl:value-of select="id"></xsl:value-of></xsl:attribute>
                             <nombre><xsl:value-of select="nombre"></xsl:value-of></nombre>
                         </profesor>
                     </xsl:for-each>
-                </profesores>
-            </personal>
+            </claustro>
 
-    <!-- Creamos la etiqueta ciclos. Dentro de esta, por cada nodo ciclos que había en el xml anterior,
-    creamos nodos ciclo con atributo id que hace referencia al @id del xml antiguo, etiquetas nombre y grado con los valores del xml antiguo
-    y una última etiqueta decretoTitulo con un atributo año que referencia al @año del xml antiguo.-->
-            <ciclos>
+    <!-- Creamos la etiqueta estudiosFP dentro de la cual integramos la información de los ciclos de Formacion Profesional
+    del XML original. En este caso cambiamos el atributo id del XML original para incluirlo como etiqueta en el XML transformado-->
+            <estudiosFP>
                 <xsl:for-each select="/ite/ciclos/ciclo">
                     <ciclo>
-                        <xsl:attribute name="id"><xsl:value-of select="@id"></xsl:value-of></xsl:attribute>
+                        <id><xsl:value-of select="@id"></xsl:value-of></id>
                         <nombre><xsl:value-of select="nombre"></xsl:value-of></nombre>
                         <grado><xsl:value-of select="grado"></xsl:value-of></grado>
                         <decretoTitulo>
@@ -63,9 +63,7 @@
                         </decretoTitulo>
                     </ciclo>
                 </xsl:for-each>
-            </ciclos>
-
+            </estudiosFP>
         </instituto>
-
     </xsl:template>
 </xsl:stylesheet>
